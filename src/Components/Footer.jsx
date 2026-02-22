@@ -1,27 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-    MapPin, 
-    Phone, 
-    Mail, 
-    Facebook, 
-    Instagram, 
-    Twitter, 
-    Send 
+import {
+    MapPin,
+    Phone,
+    Mail,
+    Facebook,
+    Instagram,
+    Twitter,
+    Send
 } from 'lucide-react';
+
+import logo from "../assets/logo.png"
 
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-300 pt-20 pb-10 border-t border-gray-800">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                
+
                 {/* Top Section - 4 Columns */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8 mb-16">
-                    
+
                     {/* Column 1: Brand Info */}
                     <div className="space-y-6">
-                        <Link to="/" className="inline-block">
-                            <h2 className="text-3xl font-serif font-bold text-white tracking-wider">
+                        <Link to="/" className=" flex items-center gap-2">
+                            <img src={logo} className='h-15' alt="" />
+                            <h2 className="text-3xl " 
+                            style={{fontFamily:"serif"}}
+                            >
                                 HOTEL ROYAL
                             </h2>
                         </Link>
@@ -59,8 +64,9 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/dining" className="hover:text-yellow-500 transition-colors duration-200 flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-600"></span> Dining & Bar
+                                <Link to="/bar" className="hover:text-yellow-500 transition-colors duration-200 flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-yellow-600"></span>
+                                    Bar & Cocktail
                                 </Link>
                             </li>
                             <li>
@@ -81,7 +87,7 @@ const Footer = () => {
                                 <MapPin className="text-yellow-600 flex-shrink-0 mt-0.5" size={20} />
                                 <span className="text-gray-400">
                                     11, Naya Bass, Churu, <br />
-                                    
+
                                     Sikar, Rajasthan 331001
                                 </span>
                             </li>
@@ -100,7 +106,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                  
+
 
                 </div>
 

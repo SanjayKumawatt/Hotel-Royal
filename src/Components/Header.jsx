@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { Menu, X, CalendarDays } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from "../assets/logo.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,9 +44,8 @@ const Header = () => {
           
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2">
-            <h1 className={`text-2xl font-serif font-bold tracking-wider ${isScrolled ? 'text-gray-900' : 'text-gray-900 md:text-white'}`}>
-              HOTEL ROYAL
-            </h1>
+          <img src={logo} className='h-18 w-full' alt="" />
+            
           </Link>
 
           {/* Desktop Navigation - UPDATED WITH PILL SHAPE & GLASS EFFECT */}
